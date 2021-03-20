@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --dark: #000000;
+    --light: #F0EEF5;
+    --tomato: #FF6347;
+    --orange: #E47011;
+    --white: #fff;
+    --gray: #6b6872;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    color: var(--white);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    transition: 0.3s ease;
+}
+
+hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Hero Section */
+
+#hero {
+    background-image: url(./img/adam-brian.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark) !important;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 450px;
+}
+
+#hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    max-width: 100%;
+    transition: 0.3s ease;
+}
+
+#hero h2 {
+    display: flex;
+    width: fit-content;
+    font-size: 4.5rem;
+    position: relative;
+    color: var(--white);
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: var(--white);
+    border: 2px solid var(--orange);
+    border-radius: 4px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+    text-decoration: none;
+}
+
+#hero .cta:hover {
+    color: var(--dark);
+    background-color: var(--orange) !important;
+}
+
+
+/* End Hero Section */
+
+
+/* Hash Section */
+
+#hash {
+    background-color: var(--dark) !important;
+}
+
+#hash .hash {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+#hash .container {
+    width: 100%;
+    color: var(--dark);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 10vh;
+}
+
+#hash h2 {
+    display: flex;
+    width: fit-content;
+    font-size: 4.5rem;
+    position: relative;
+    color: var(--white);
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+
+/* End Hash Section */
+
+
+/* Artist Section */
+
+#artist {
+    padding: 50px;
+    background-color: var(--dark) !important;
+}
+
+#artist .img-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#artist .single-img {
+    text-align: justify;
+    width: 30%;
+    height: 50%;
+    padding: 0 20px 20px;
+}
+
+#artist img {
+    display: flex;
+    margin: 0 auto;
+}
+
+#artist img:hover {
+    opacity: .5;
+    transition: .2s;
+}
+
+#artist p {
+    color: var(--white);
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    transition: 0.3s ease;
+}
+
+
+/* End Artist Section */
+
+
+/* Artist Sliders */
+
+#artist-sliders {
+    visibility: hidden;
+    clear: both;
+    display: none;
+    background: var(--dark);
+    padding: 10px 0 50px 0;
+}
+
+#artist-sliders h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    transition: 0.3s ease;
+}
+
+
+/* End Artist Sliders */
+
+
+/* Artist Names */
+
+#artist-names {
+    flex-direction: column;
+    text-align: left;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: var(--white) !important;
+}
+
+#artist-names .name-box {
+    padding: 10px 0 10px 30px;
+}
+
+#artist-names h4 {
+    color: var(--orange);
+    font-size: 1.8rem;
+    text-align: left;
+    margin-top: 10px 0 0 0;
+    line-height: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+#artist-names .names {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-content: space-between;
+    align-items: flex-start;
+    order: 0;
+}
+
+#artist-names p {
+    color: var(--gray);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    padding-right: 50px;
+}
+
+
+/* End Artist Names */
+
+
+/* Media Query */
+
+
+/* # Phone */
+
+@media only screen and (max-width:320px) {
+    .cta {
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
+    /* Hero */
+    #hero .hero-text {
+        padding: 20px;
+    }
+    #hero h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    /* End Hero */
+    /* Hash */
+    #hash h2 {
+        font-size: 2rem;
+    }
+    /* Hash */
+    /* Artists */
+    #artist p {
+        font-size: 1rem;
+    }
+    #artist img {
+        width: 200px;
+    }
+    /* End Artists */
+}
+
+
+/* # Tablet */
+
+@media only screen and (min-width:321px) and (max-width:768px) {
+    .cta {
+        font-size: 1rem;
+        padding: 10px 30px;
+        transition: 0.3s ease;
+    }
+    /* Hero */
+    #hero .hero-text {
+        padding: 20px;
+        transition: 0.3s ease;
+    }
+    #hero h2 {
+        font-size: 3rem;
+        transition: 0.3s ease;
+    }
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+    /* End Hero */
+    /* Hash */
+    #hash h2 {
+        font-size: 3rem;
+        transition: 0.3s ease;
+    }
+    /* Hash */
+    /* Artists */
+    #artist p {
+        font-size: 3rem;
+        transition: 0.3s ease;
+    }
+    /* End Artists */
+}
+
+
+/* # Desktop */
+
+@media (max-width: 991px) {
+    #hero {
+        background-image: url(./img/adam-brian-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all .3s ease;
+    }
+    p {
+        text-align: center;
+    }
+    #hash .hash {
+        padding: 10px 5px;
+    }
+    /* Artists */
+    #artist p {
+        font-size: 2rem;
+        transition: 0.3s ease;
+    }
+    #artist {
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
+    }
+    #artist-sliders {
+        visibility: visible;
+        display: block;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+    #artist-sliders .container {
+        min-height: 10vh;
+        padding: 10px;
+    }
+    #artist-sliders .carousel {
+        padding: 0 30px 0 30px;
+    }
+    /* End Artists */
+}
+
+
+/* End Media Query */
